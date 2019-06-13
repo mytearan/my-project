@@ -1,16 +1,14 @@
 <template>
-    <div>
+    <div class="col-3"><br>
       <div class="card" style="width: 18rem;">
-        <img :src="pokemon.sprites.front_default" class="card-img-top" alt="pic of blastoise">
+        <img :src="pokemon.sprites.front_default" class="card-img-top" alt="pic of pokemon">
         <div class="card-body">
            <!-- <h1>{{url}}</h1> -->
-            <h5 class="card-title">{{ pokemon.name }}</h5>
-            <p class="card-text">
-              Height: {{ pokemon.height * 3.937 }} inches<br>
-              Weight: {{ pokemon.weight }} units<br>
-            <!--<p class="card-text"><small class=".text-dark">Height: 16 inches<br>Weight: 855 pounds</small></p>-->
-            </p>
-            <a id="button-secondary" href="#" class="btn btn-secondary">see moves</a>
+            <h5 class="card-title text-capitalized">{{ pokemon.name }}</h5>
+            <!-- <p class="card-text"> -->
+            <div>Height: {{ pokemon.height * 3.937 }} inches<br></div>
+            <div>Weight: {{ pokemon.weight }} units<br></div><br>
+            <a id="button-secondary" href="#" class="btn btn-secondary">And I OOP</a>
         </div>
       </div>
     </div>
@@ -46,6 +44,11 @@ export default {
 </script>
 <!--Add "scoped" attribute to limit CSS to this component only-->
 <style scoped>
+.card {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/*
 h3 {
   margin: 40px 0 0;
 }
@@ -59,7 +62,7 @@ li {
 }
 a {
   color: #42b983;
-}
+} */
 #button-secondary {
   color: #ffffff;
 }
