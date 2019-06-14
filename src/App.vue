@@ -7,7 +7,7 @@
         {{ type.name }}
       </span>
       <div class="row"> 
-        <card :url="item.pokemon.url" v-for="item in pokemonOfCurrentType" :key="item.pokemon.name"><br><br></card>
+        <card :url="item.pokemon.url" v-for="item in pokemonOfCurrentType" :key="item.pokemon.name"></card>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
     return {
         pokemonOfCurrentType: "",
         types: "",
-        activeType: "Rock",
+        activeType: "rock",
     }
   },
   methods: {
@@ -43,11 +43,11 @@ export default {
         method: 'get',
         url: 'http://pokeapi.co/api/v2/type/' + type,
         // responseType: 'stream'
-    }) // end of axios
-    .then(function (response) {
-        // onsole.log(response.data),
+      }) // end of axios
+      .then(function (response) {
+        // console.log(response.data),
         vm.pokemonOfCurrentType = response.data.pokemon
-    });
+      });
     }
   },
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-3"><br>
+    <div class="col-3">
       <div class="card" style="width: 18rem;">
         <img :src="pokemon.sprites.front_default" class="card-img-top" alt="pic of pokemon">
         <div class="card-body">
@@ -13,6 +13,7 @@
       </div>
     </div>
 </template>
+<!--v-if="pokemon.spites && pokemon.sprites.front_default"-->
 <!--git init/ git status/ git add ./get status/git commit -m "xxx"/git push/ git remote add origin/ git push/ GIT STATUS/ Git add . -->
 <script>
 export default {
